@@ -1,0 +1,56 @@
+{
+  "name": "niggli",
+  "version": "0.0.0",
+  "license": "MIT",
+  "description": "Niggli reduction of a crystal unit cell, the G6 vector of a cell and the distance between two",
+  "keywords": [
+    "crystallography",
+    "niggli",
+    "reduced cell",
+    "unit cell",
+    "lattice",
+    "g6"
+  ],
+  "author": "Luc Patiny",
+  "type": "module",
+  "exports": {
+    ".": "./lib/index.js"
+  },
+  "files": [
+    "lib",
+    "src"
+  ],
+  "scripts": {
+    "check-types": "tsc --noEmit",
+    "clean": "rimraf coverage lib",
+    "eslint": "eslint .",
+    "eslint-fix": "eslint . --fix",
+    "prepack": "npm run tsc",
+    "prettier": "prettier --check .",
+    "prettier-write": "prettier --write .",
+    "test": "npm run test-only && npm run check-types && npm run eslint && npm run prettier",
+    "test-only": "vitest run --coverage",
+    "tsc": "npm run clean && npm run tsc-build",
+    "tsc-build": "tsc --project tsconfig.build.json"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "@vitest/coverage-v8": "^5.1.1",
+    "@zakodium/tsconfig": "^1.0.5",
+    "eslint": "^10.15.0",
+    "eslint-config-cheminfo-typescript": "^23.0.0",
+    "ml-xsadd": "^3.0.1",
+    "prettier": "^3.10.1",
+    "rimraf": "^6.1.4",
+    "typescript": "^6.0.3",
+    "vitest": "^5.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cheminfo/niggli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cheminfo/niggli/issues"
+  },
+  "homepage": "https://github.com/cheminfo/niggli#readme"
+}
