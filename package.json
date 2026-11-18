@@ -1,6 +1,6 @@
 {
   "name": "niggli",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "license": "MIT",
   "description": "Niggli reduction of a crystal unit cell, the G6 vector of a cell and the distance between two",
   "keywords": [
